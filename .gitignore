@@ -1,0 +1,16 @@
+build/
+dist/
+tmp/
+tools/ffmpeg/*.exe
+scripts/build-reference-*.py
+pets/*/README.md
+*.log
+*.tmp
+*.zip
+*.7z
+*.rar
+*.previous.*
+__pycache__/
+.pytest_cache/
+.DS_Store
+Thumbs.db
