@@ -7,7 +7,7 @@ $ErrorActionPreference = "Stop"
 $projectRoot = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 $buildRoot = Join-Path $projectRoot "build"
 $distRoot = Join-Path $projectRoot "dist"
-$packageName = "HatchReplayPet-$Version"
+$packageName = "sanjiaozhou_luzhi-$Version"
 $packageRoot = Join-Path $buildRoot $packageName
 $zipPath = Join-Path $distRoot "$packageName.zip"
 
@@ -18,19 +18,19 @@ New-Item -ItemType Directory -Force -Path $packageRoot | Out-Null
 New-Item -ItemType Directory -Force -Path $distRoot | Out-Null
 
 $items = @(
-    "assets\hatch-replay-pet.ico",
-    "assets\hatch-replay-pet-icon.png",
+    "assets\sanjiaozhou_luzhi.ico",
+    "assets\sanjiaozhou_luzhi_icon.png",
     "pets\hatch-default\pet.json",
     "pets\hatch-default\spritesheet.webp",
     "tools\ffmpeg\ffmpeg.exe",
     "tools\ffmpeg\ffprobe.exe",
-    "SimpleReplayController.ps1",
-    "Run-SimpleReplayController.vbs",
-    "Run-SimpleReplayController.cmd",
-    "QuickLaunch.ps1",
-    "QuickLaunch.cmd",
-    "Install-QuickLaunch.ps1",
-    "Install-QuickLaunch.cmd",
+    "sanjiaozhou_luzhi.ps1",
+    "sanjiaozhou_luzhi_run.vbs",
+    "sanjiaozhou_luzhi_run.cmd",
+    "sanjiaozhou_luzhi_launcher.ps1",
+    "sanjiaozhou_luzhi_launcher.cmd",
+    "sanjiaozhou_luzhi_shortcut.ps1",
+    "sanjiaozhou_luzhi_shortcut.cmd",
     "README.md",
     "NOTICE.md"
 )

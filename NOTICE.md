@@ -1,6 +1,6 @@
 # Notice
 
-Hatch Replay Pet bundles FFmpeg binaries under `tools/ffmpeg`.
+sanjiaozhou_luzhi bundles FFmpeg binaries under `tools/ffmpeg`.
 
 FFmpeg is a third-party project. Review the FFmpeg license terms before redistributing this package publicly.
 

@@ -5,17 +5,17 @@ param(
     [string]$Target = "Both",
     [ValidateSet("zh-CN", "en-US")]
     [string]$Language = "zh-CN",
-    [string]$Name = "Hatch Replay Pet",
+    [string]$Name = "sanjiaozhou_luzhi",
     [switch]$Quiet
 )
 
 $ErrorActionPreference = "Stop"
 
 $projectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$launcher = Join-Path $projectRoot "Run-SimpleReplayController.vbs"
-$controller = Join-Path $projectRoot "SimpleReplayController.ps1"
-$icon = Join-Path $projectRoot "assets\hatch-replay-pet.ico"
-$startMenuFolderName = "Hatch Replay Pet"
+$launcher = Join-Path $projectRoot "sanjiaozhou_luzhi_run.vbs"
+$controller = Join-Path $projectRoot "sanjiaozhou_luzhi.ps1"
+$icon = Join-Path $projectRoot "assets\sanjiaozhou_luzhi.ico"
+$startMenuFolderName = "sanjiaozhou_luzhi"
 
 function Write-Info {
     param([string]$Message)
@@ -92,7 +92,7 @@ function New-QuickShortcut {
     $shortcut.Arguments = Join-ProcessArguments @($launcher, "-Language", $Language)
     $shortcut.WorkingDirectory = $projectRoot
     $shortcut.IconLocation = "$icon,0"
-    $shortcut.Description = "Launch Hatch Replay Pet without a console window."
+    $shortcut.Description = "Launch sanjiaozhou_luzhi without a console window."
     $shortcut.WindowStyle = 7
     $shortcut.Save()
 }

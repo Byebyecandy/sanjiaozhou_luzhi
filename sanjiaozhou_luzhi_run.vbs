@@ -5,7 +5,7 @@ Set shell = CreateObject("WScript.Shell")
 Set fso = CreateObject("Scripting.FileSystemObject")
 
 scriptDir = fso.GetParentFolderName(WScript.ScriptFullName)
-command = "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File " & Quote(scriptDir & "\SimpleReplayController.ps1")
+command = "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File " & Quote(scriptDir & "\sanjiaozhou_luzhi.ps1")
 
 For i = 0 To WScript.Arguments.Count - 1
     arg = WScript.Arguments.Item(i)

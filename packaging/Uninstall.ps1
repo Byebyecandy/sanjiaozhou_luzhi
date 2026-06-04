@@ -1,13 +1,13 @@
 param(
-    [string]$InstallDir = (Join-Path $env:LOCALAPPDATA "Programs\HatchReplayPet"),
+    [string]$InstallDir = (Join-Path $env:LOCALAPPDATA "Programs\sanjiaozhou_luzhi"),
     [switch]$NoSelfDeleteDelay
 )
 
 $ErrorActionPreference = "Stop"
 
 $installDir = [Environment]::ExpandEnvironmentVariables($InstallDir)
-$desktopShortcut = Join-Path ([Environment]::GetFolderPath("Desktop")) "Hatch Replay Pet.lnk"
-$startMenuDir = Join-Path ([Environment]::GetFolderPath("Programs")) "Hatch Replay Pet"
+$desktopShortcut = Join-Path ([Environment]::GetFolderPath("Desktop")) "sanjiaozhou_luzhi.lnk"
+$startMenuDir = Join-Path ([Environment]::GetFolderPath("Programs")) "sanjiaozhou_luzhi"
 
 if (Test-Path $desktopShortcut) {
     Remove-Item -LiteralPath $desktopShortcut -Force
@@ -20,7 +20,7 @@ if (Test-Path $startMenuDir) {
 if (Test-Path $installDir) {
     $currentScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
     if ((Resolve-Path $currentScriptDir).Path -eq (Resolve-Path $installDir).Path -and -not $NoSelfDeleteDelay) {
-        $cleanup = Join-Path $env:TEMP ("HatchReplayPet-Uninstall-" + [guid]::NewGuid().ToString("N") + ".cmd")
+        $cleanup = Join-Path $env:TEMP ("sanjiaozhou_luzhi_uninstall_" + [guid]::NewGuid().ToString("N") + ".cmd")
         $lines = @(
             "@echo off",
             "timeout /t 2 /nobreak >nul",
@@ -34,4 +34,4 @@ if (Test-Path $installDir) {
     }
 }
 
-Write-Host "Removed Hatch Replay Pet shortcuts and install directory."
+Write-Host "Removed sanjiaozhou_luzhi shortcuts and install directory."

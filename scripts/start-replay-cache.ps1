@@ -24,7 +24,7 @@ if (Test-Path $localFfmpeg) {
     $ffmpeg = $cmd.Source
 }
 
-$cacheDir = Join-Path $env:LOCALAPPDATA "SimpleReplay\cache"
+$cacheDir = Join-Path $env:LOCALAPPDATA "sanjiaozhou_luzhi\cache"
 New-Item -ItemType Directory -Force -Path $cacheDir | Out-Null
 
 $outputPattern = Join-Path $cacheDir "cache_%03d.ts"

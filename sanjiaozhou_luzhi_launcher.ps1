@@ -10,7 +10,7 @@ param(
 $ErrorActionPreference = "Stop"
 
 $projectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$installScript = Join-Path $projectRoot "Install-QuickLaunch.ps1"
+$installScript = Join-Path $projectRoot "sanjiaozhou_luzhi_shortcut.ps1"
 
 function Invoke-QuickLaunchAction {
     param(
@@ -28,7 +28,7 @@ function Invoke-QuickLaunchAction {
 
 function Show-Menu {
     Clear-Host
-    Write-Host "Hatch Replay Pet Quick Launch"
+    Write-Host "sanjiaozhou_luzhi quick launch"
     Write-Host ""
     Write-Host "1. Launch app"
     Write-Host "2. Install Desktop and Start Menu shortcuts"

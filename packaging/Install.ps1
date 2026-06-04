@@ -1,5 +1,5 @@
 param(
-    [string]$InstallDir = (Join-Path $env:LOCALAPPDATA "Programs\HatchReplayPet"),
+    [string]$InstallDir = (Join-Path $env:LOCALAPPDATA "Programs\sanjiaozhou_luzhi"),
     [ValidateSet("zh-CN", "en-US")]
     [string]$Language = "zh-CN"
 )
@@ -9,8 +9,8 @@ $ErrorActionPreference = "Stop"
 $sourceRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $installDir = [Environment]::ExpandEnvironmentVariables($InstallDir)
 
-if (-not (Test-Path (Join-Path $sourceRoot "SimpleReplayController.ps1"))) {
-    throw "Installer must be run from the extracted Hatch Replay Pet package."
+if (-not (Test-Path (Join-Path $sourceRoot "sanjiaozhou_luzhi.ps1"))) {
+    throw "Installer must be run from the extracted sanjiaozhou_luzhi package."
 }
 
 New-Item -ItemType Directory -Force -Path $installDir | Out-Null
@@ -19,13 +19,13 @@ $items = @(
     "assets",
     "pets",
     "tools",
-    "SimpleReplayController.ps1",
-    "Run-SimpleReplayController.vbs",
-    "Run-SimpleReplayController.cmd",
-    "QuickLaunch.ps1",
-    "QuickLaunch.cmd",
-    "Install-QuickLaunch.ps1",
-    "Install-QuickLaunch.cmd",
+    "sanjiaozhou_luzhi.ps1",
+    "sanjiaozhou_luzhi_run.vbs",
+    "sanjiaozhou_luzhi_run.cmd",
+    "sanjiaozhou_luzhi_launcher.ps1",
+    "sanjiaozhou_luzhi_launcher.cmd",
+    "sanjiaozhou_luzhi_shortcut.ps1",
+    "sanjiaozhou_luzhi_shortcut.cmd",
     "Uninstall.ps1",
     "Uninstall.cmd",
     "README.md",
@@ -48,7 +48,7 @@ foreach ($item in $items) {
     }
 }
 
-& powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $installDir "Install-QuickLaunch.ps1") -Action Install -Target Both -Language $Language
+& powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $installDir "sanjiaozhou_luzhi_shortcut.ps1") -Action Install -Target Both -Language $Language
 
 Write-Host "Installed to: $installDir"
 Write-Host "Launch from the Desktop or Start Menu shortcut."

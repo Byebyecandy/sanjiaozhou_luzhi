@@ -412,9 +412,9 @@ public class CuteReplayPetCanvas : Panel
 
 $script:ProjectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $script:LocalFfmpeg = Join-Path $script:ProjectRoot "tools\ffmpeg\ffmpeg.exe"
-$script:AppIconPath = Join-Path $script:ProjectRoot "assets\hatch-replay-pet.ico"
-$script:CacheDir = Join-Path $env:LOCALAPPDATA "SimpleReplay\cache"
-$script:OutputDir = Join-Path $env:USERPROFILE "Videos\SimpleReplay"
+$script:AppIconPath = Join-Path $script:ProjectRoot "assets\sanjiaozhou_luzhi.ico"
+$script:CacheDir = Join-Path $env:LOCALAPPDATA "sanjiaozhou_luzhi\cache"
+$script:OutputDir = Join-Path $env:USERPROFILE "Videos\sanjiaozhou_luzhi"
 
 $script:FrameRate = 60
 $script:VideoBitrate = "20M"
@@ -678,7 +678,7 @@ function Convert-HatchSpritesheetForGdi {
     param([string]$SpritesheetPath)
 
     $ffmpeg = Resolve-Ffmpeg
-    $tempRoot = Join-Path $env:TEMP "SimpleReplay\hatch-pets"
+    $tempRoot = Join-Path $env:TEMP "sanjiaozhou_luzhi\hatch-pets"
     New-Item -ItemType Directory -Force -Path $tempRoot | Out-Null
 
     $hashProvider = [System.Security.Cryptography.SHA256]::Create()
@@ -807,7 +807,7 @@ function T {
     )
 
     $texts = @{
-        "app.title" = @{"zh-CN" = "Hatch 回放桌宠"; "en-US" = "Hatch Replay Pet"}
+        "app.title" = @{"zh-CN" = "sanjiaozhou_luzhi"; "en-US" = "sanjiaozhou_luzhi"}
         "status.tencentDetected" = @{"zh-CN" = "检测到腾讯游戏"; "en-US" = "Tencent game detected"}
         "status.recording" = @{"zh-CN" = "录制中"; "en-US" = "Recording"}
         "status.idle" = @{"zh-CN" = "空闲"; "en-US" = "Idle"}
@@ -1062,7 +1062,7 @@ function Clear-Cache {
     New-Item -ItemType Directory -Force -Path $script:CacheDir | Out-Null
 
     $resolvedCache = (Resolve-Path $script:CacheDir).Path
-    $expectedRoot = Join-Path $env:LOCALAPPDATA "SimpleReplay\cache"
+    $expectedRoot = Join-Path $env:LOCALAPPDATA "sanjiaozhou_luzhi\cache"
     $resolvedExpected = (Resolve-Path $expectedRoot).Path
 
     if ($resolvedCache -ne $resolvedExpected) {

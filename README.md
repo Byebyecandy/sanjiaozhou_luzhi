@@ -1,4 +1,4 @@
-# Hatch Replay Pet
+# sanjiaozhou_luzhi
 
 一个轻量级 Windows 即时回放录屏工具，带桌面角色控制面板。
 
@@ -8,7 +8,7 @@
 - `Alt + F9` 开始或停止缓存。
 - `Alt + F10` 保存最近缓存片段。
 - 使用内置 FFmpeg 和 NVIDIA NVENC 编码。
-- 输出视频保存到：`%USERPROFILE%\Videos\SimpleReplay`
+- 输出视频保存到：`%USERPROFILE%\Videos\sanjiaozhou_luzhi`
 - 支持桌面快捷方式和开始菜单快捷方式。
 
 ## 安装
@@ -22,14 +22,14 @@ Install.cmd
 安装目录：
 
 ```text
-%LOCALAPPDATA%\Programs\HatchReplayPet
+%LOCALAPPDATA%\Programs\sanjiaozhou_luzhi
 ```
 
 安装完成后会创建：
 
 ```text
-桌面\Hatch Replay Pet.lnk
-开始菜单\Hatch Replay Pet\Hatch Replay Pet.lnk
+桌面\sanjiaozhou_luzhi.lnk
+开始菜单\sanjiaozhou_luzhi\sanjiaozhou_luzhi.lnk
 ```
 
 ## 使用

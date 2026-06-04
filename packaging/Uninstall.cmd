@@ -1,6 +1,6 @@
 @echo off
 setlocal
-title Hatch Replay Pet Uninstaller
+title sanjiaozhou_luzhi uninstaller
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0Uninstall.ps1" %*
 if errorlevel 1 (
   echo.

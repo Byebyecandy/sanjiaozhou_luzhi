@@ -19,8 +19,8 @@ if (Test-Path $localFfmpeg) {
     $ffmpeg = $cmd.Source
 }
 
-$cacheDir = Join-Path $env:LOCALAPPDATA "SimpleReplay\cache"
-$outputDir = Join-Path $env:USERPROFILE "Videos\SimpleReplay"
+$cacheDir = Join-Path $env:LOCALAPPDATA "sanjiaozhou_luzhi\cache"
+$outputDir = Join-Path $env:USERPROFILE "Videos\sanjiaozhou_luzhi"
 New-Item -ItemType Directory -Force -Path $outputDir | Out-Null
 
 if (-not (Test-Path $cacheDir)) {
